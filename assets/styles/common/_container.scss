@@ -1,0 +1,16 @@
+.container {
+  width: 100%;
+  max-width: calc(100% - 180px);
+  margin-inline: auto;
+  // border-inline: 0.01px solid rgba(0, 0, 0, 0.555);
+}
+@media (min-width:1700px) {
+  .container {
+    max-width: calc(100% - 480px);
+  }
+}
+@media (max-width:1400px) {
+  .container {
+    max-width: calc(100% - 8%);
+  }
+}

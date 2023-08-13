@@ -1,0 +1,175 @@
+/* Variables  */
+
+/* ==================*-HEADER COMPONENT-*=============================== */
+header {
+    width: 100%;
+    margin-bottom: null;
+}
+
+header nav {
+    --header_padding : 30px;
+
+    display: var(--d_flex);
+    align-items: var(--flex_align_center);
+    justify-content: var(--flex_justify_between);
+    background: var(--headerNav);
+    padding: var(--header_padding);
+    position: relative;
+}
+
+header nav #menuToggle {
+    display: none;
+}
+
+header nav .logo {
+    --Brand_width : auto;
+    --Brand_max_width : 180px;
+    max-width: var(--Brand_max_width);
+}
+
+header nav .logo .logoImg {
+    --logoImg : 100%;
+    width: var(--logoImg);
+    max-width: var(--logoImg);
+}
+
+header nav .menu ul {
+    list-style: var(--li_style);
+    text-decoration: var(--text_decoration);
+    display: var(--d_flex);
+    align-items: var(--flex_align_center);
+}
+
+header nav .menu li {
+    --menu_li_spacing_inline : 0px 25px;
+    margin: var(--menu_li_spacing_inline);
+}
+
+header nav .menu li a {
+    color: var(--color);
+    font-size: var(--font_size);
+    font-weight: var(--font_weight);
+    line-height: var(--line_height);
+    letter-spacing: var(--letter_spacing);
+    word-spacing: var(--word_spacing);
+}
+
+.hamburger {
+    --hamburger_height: 30px;
+    --hamburger_width: 35px;
+    --hamburger_margin_left: auto;
+    --hamburger_border_radius: 3px;
+
+    height: var(--hamburger_height);
+    width: var(--hamburger_width);
+    margin-left: var(--hamburger_margin_left);
+    border-radius: var(--hamburger_border_radius);
+    display: none;
+}
+
+.hamburger label {
+    --menuLabel: #f5f5f5;
+    --menuLabel_padding: 6px;
+    --menuLabel_border_radius: 6px;
+    width: var(--fill_100);
+    height: var(--fill_100);
+    display: var(--d_flex);
+    flex-direction: var(--flex_direction_col);
+    justify-content: var(--flex_justify_between);
+    background: var(--menuLabel);
+    padding: var(--menuLabel_padding);
+    border-radius: var(--menuLabel_border_radius);
+    cursor: pointer;
+}
+
+.hamburger label span {
+    display: block;
+    width: var(--fill_100);
+    border-top: 2px solid var(--dark_color);
+    border-radius: 2px;
+    transition: all 0.2s ease-in;
+}
+.menu .dropDown_main .dropdown_menu {
+    display: none;
+}
+.menu .dropDown_main {
+    position: relative;
+}
+.menu .dropDown_main:hover > .dropdown_menu {
+    display: block;
+}
+
+.menu .dropdown_menu {
+    width: 150%;
+    position: absolute;
+    top: 100%;
+    padding-top: 12px;
+}
+.menu .dropdown_menu ul {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 6px;
+    background: #f5f5f5;
+    border-radius: 6px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+
+.menu .dropdown_menu li {
+    margin: 0 0 10px 0;
+}
+
+@media (max-width:991px) {
+    .hamburger {
+        display: block;
+    }
+
+    .menu {
+        --menuElm: rgb(177, 177, 177);
+        width: var(--fill_100);
+        background: var(--menuElm);
+        position: absolute;
+        right: 0;
+        top: 100%;
+        z-index: -1;
+    }
+
+    .menu {
+        --menu_inner_padding: 12px 30px;
+        --menu_layout_top: -200%;
+
+        padding: var(--menu_inner_padding);
+        top: var(--menu_layout_top);
+        transition: top 0.4s ease-in;
+    }
+
+    #menuToggle:checked~.menu {
+        top: 100%;
+    }
+
+    /* Add Animation hamburger */
+    #menuToggle:checked~.hamburger label>span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    #menuToggle:checked~.hamburger label>span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menuToggle:checked~.hamburger label>span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    header nav .menu ul {
+        display: block;
+        justify-content: center;
+    }
+
+    header nav .menu ul li {
+        margin-inline: 0;
+        margin-bottom: 5px;
+    }
+    /* Add Animation hamburger end */
+}
+
+/* ==================*-HEADER COMPONENT-*=============================== */

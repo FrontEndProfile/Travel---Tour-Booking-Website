@@ -1,0 +1,64 @@
+// fonts files local
+// @use 'fonts';
+// @use 'base' as *;
+// @use 'container';
+// @use 'header';
+@use 'common/index' as *;
+@use 'header';
+
+
+
+// end of media 
+@use 'media';
+
+
+
+// Home page 
+// === HERO SECTION 
+.hero {
+  height: 100vh;
+  min-height: 100vh;
+  background: teal;
+  color: $white;
+  .swiper {
+    width: 100%;
+    height: 100%;
+    .swiper-slide {
+      background: #fff;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative;
+      width: 100%;
+    }
+    .swiper-pagination {
+      .swiper-pagination-bullet {
+        width: 40px;
+        height: 2.5px;
+        border-radius: 2px;
+        background: $white;
+        opacity: 1;
+      }
+      .swiper-pagination-bullet-active {
+        background: $primary;
+      }
+    }
+  }
+  &_background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &_content {
+    position: relative;
+    &_before_line {
+      max-width: 78px;
+    }
+  }
+}

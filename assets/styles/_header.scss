@@ -1,0 +1,93 @@
+/* ==================*-HEADER COMPONENT-*=============================== */
+@use 'common/index' as *;
+
+header {
+  width: 100%;
+  margin-bottom: null;
+  position: absolute;
+  z-index: 99;
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding-block: 42px;
+    #menuToggle {
+      display: none;
+    }
+
+    .logo {
+      max-width: 126px;
+
+      .logoImg {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    .menu {
+      display: flex;
+
+      ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+
+        li {
+          margin: 0 0 0 50px;
+
+          a {
+            color: $white;
+            font-size: calc($font_size_base + 1px);
+            line-height: normal;
+            font-family: $font_circular_bold;
+            font-weight: 500;
+          }
+        }
+
+        .btn-base {
+          margin-left: 8vw;
+          filter: drop-shadow(0px 20px 35px rgba(223, 105, 81, 0.15));
+          border-radius: 10px;
+          color: $white;
+        }
+      }
+
+    }
+
+    .hamburger {
+      height: 40px;
+      width: 45px;
+      margin-left: auto;
+      border-radius: 3px;
+
+      label {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: $primary;
+        padding: 8px;
+        border-radius: 6px;
+        cursor: pointer;
+
+        span {
+          display: block;
+          width: 100%;
+          border-top: 2px solid $white;
+          border-radius: 2px;
+          transition: all 0.2s ease-in;
+        }
+      }
+    }
+
+  }
+}
+
+.hamburger {
+  display: none;
+}
+
+
+/* ==================*-HEADER COMPONENT-*=============================== */
