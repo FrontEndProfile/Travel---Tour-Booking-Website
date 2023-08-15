@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel & Tour Booking Website</title>
+  <link rel="stylesheet" href="assets/styles/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/styles/main.css">
+</head>
+ 
+<body>
+  <header>
+    <nav class="container">
+      <input type="checkbox" id="menuToggle">
+      <a href="#" class="logo">
+        <img src="../assets/images/logo.png" class="logoImg" alt="Brand_Logo">
+      </a>
+
+      <div class="hamburger">
+        <label for="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Upcomming Packages</a></li>
+        </ul>
+
+        <ul>
+          <li><a href="#" class="btn-base">Get in Touch</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="hero_background">
+            <img src="../assets/images/hero-desktop.webp" alt="hero">
+          </div>
+          <div class="hero_content container">
+            <img class="hero_before_line" src="../assets/images/zig-zag-line.svg" alt="line">
+            <h1>No matter where you’re going to, we’ll take you there</h1>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="hero_background">
+            <img src="../assets/images/hero-desktop.webp" alt="hero">
+          </div>
+          <div class="hero_content container">
+            <img class="hero_before_line" src="../assets/images/zig-zag-line.svg" alt="line">
+            <h1>No matter where you’re going to, we’ll take you there</h1>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </section>
+
+  <script src="scripts/swiper-bundle.min.js"></script>
+  <script src="node_modules/htmx.org/dist/htmx.min.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>

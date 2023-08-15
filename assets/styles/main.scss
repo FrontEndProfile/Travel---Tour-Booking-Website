@@ -1,20 +1,12 @@
-// fonts files local
-// @use 'fonts';
-// @use 'base' as *;
-// @use 'container';
-// @use 'header';
 @use 'common/index' as *;
 @use 'header';
-
-
-
-// end of media 
+// MEDIA OF FILE
 @use 'media';
 
 
 
 // Home page 
-// === HERO SECTION 
+// -- HERO SECTION 
 .hero {
   height: 100vh;
   min-height: 100vh;
